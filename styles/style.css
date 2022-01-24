@@ -1,0 +1,238 @@
+/* main theme variables */
+:root{
+    --var-bg-primary: hsl(216, 18%, 16%);
+    --var-bg-secodary:  hsl(217, 10%, 25%);
+    --var-color-primary: hsl(0, 0%, 93%);
+    --var-color-secodary: hsl(183, 100%, 35%);
+    --var-selection-color: hsl(2, 76%, 35%);
+    --var-brand-font: 'Dancing Script', cursive;
+    --var-main-font: 'Mochiy Pop P One', sans-serif;
+    --var-thin-font: 'Rajdhani', sans-serif;
+}
+
+/* reset default values */
+
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+
+*{
+    font-family: var(--var-main-font);
+}
+
+*::selection{
+    background-color: var(--var-selection-color);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    user-select: none;
+    text-decoration: none;
+}
+
+img{
+    user-select: none;
+}
+
+/* re-usable styles*/
+
+.content-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+figure{
+    max-width: 15rem;
+    padding: .5rem; 
+    background-color: var(--var-color-secodary);
+    border-radius: 1.2rem 0;
+    border: 0.125rem solid var(--var-color-secodary);
+}
+
+figure:hover{
+    scale: 1.05;
+    box-shadow: 0 0 .5rem var(--var-bg-primary);
+}
+
+.my-images{
+    object-fit: cover;
+    max-width: 100%;
+    border: .125rem solid var(--var-color-primary);
+    border-radius: 1rem 0;
+    box-shadow: 0 0 .5rem var(--var-bg-primary);
+    opacity: 0.95;
+}
+
+.my-images:hover{
+    opacity: 1;
+}
+
+figcaption{
+    background-color: var(--var-bg-primary);
+    opacity: 0.90;
+    padding: .5rem;
+    margin-top: .25rem ;
+    border-radius: 0 1rem ;
+    border: .125rem solid var(--var-color-primary);
+    box-shadow: 0 0 .5rem var(--var-bg-primary);
+}
+
+figcaption li{
+    font-size: 1.2rem;
+    font-family: var(--var-thin-font);
+}
+
+/* main container properties */
+.container-full{
+    display: grid;
+    grid-template-areas: 
+        "header"
+        "section1"
+        "section2"
+        "section3"
+        "footer";
+    grid-template-columns: 100%;
+    grid-template-rows: 5rem 100vh auto auto 3.5rem;
+}
+
+/* navbar styles */
+#navbar{
+    grid-area: header;
+    background-color: var(--var-bg-primary);
+    color: var(--var-color-primary);
+}
+
+#navbar-header{
+    max-width: 1200px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#brand{
+    font-family: var(--var-brand-font);
+    color: var(--var-color-primary);
+    font-size: 1.2rem;
+}
+
+
+#nav-list{
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.nav-item{
+    height: inherit;
+    display: flex;
+    align-items: center;
+    padding: .5rem .5rem;
+    border-bottom-left-radius: 0.5rem;
+}
+
+.nav-item:hover{
+    background-color: #000;
+}
+
+
+.nav-link{
+    font-size: 0.9rem;
+    color: var(--var-color-primary);
+}
+
+/* about-me section's styles */ 
+#about{
+    grid-area: section1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--var-bg-primary);
+    color: var(--var-color-primary);
+}
+
+#about-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    padding: 0 .5rem;
+    max-width: 1200px;
+    text-align: center;
+}
+
+#about-header *{
+    margin: .5rem 0;
+}
+
+#about-header p{
+    font-family: var(--var-thin-font);
+    font-weight: 100;
+}
+
+/* mywork section's styles */ 
+#my-work{
+    grid-area: section2;
+    display: flex;
+    justify-content: center;
+    background-color: var(--var-bg-secodary);
+    color: var(--var-color-primary)
+}
+
+#mywork-container{
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem 1rem;
+    max-width: 1200px;
+}
+
+#mywork-wrapper{
+    width: 100%;
+    align-self: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    grid-gap: 1rem ;
+    justify-items: center;
+}
+
+#mywork-header{
+    align-self: center;
+    border-bottom: .125rem solid var(--var-color-secodary);
+    margin-bottom: 2rem;
+}
+
+#mywork-header h4{
+    margin-bottom: 0.25rem;
+}
+
+.mywork-item figure{
+    margin: 0;
+}
+
+/* contact me section's styles */
+#contact{
+    grid-area: section3;
+    background-color: var(--var-bg-primary);
+    color: var(--var-color-primary);
+}
+
+/* footer styles */ 
+footer{
+    grid-area: footer;
+    background-color: var(--var-bg-secodary);
+    color: var(--var-color-sec--var-bg-secodary);
+}
