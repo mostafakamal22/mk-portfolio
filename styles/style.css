@@ -75,6 +75,19 @@ img{
     align-items: center;
 }
 
+section{
+    border-bottom: .125rem solid var(--var-color-primary);
+}
+
+.section-header{
+    align-self: center;
+    font-size: 1.2rem;
+    border-bottom: .125rem solid var(--var-color-secodary);
+    margin-bottom: 3rem;
+    line-height: .3;
+    text-shadow: 0 .25rem 0 var(--var-color-secodary);
+}    
+
 figure{
     display: flex;
     align-items: center;
@@ -95,21 +108,34 @@ figure{
     border: .125rem solid var(--var-color-primary);
     border-radius: .5rem 0;
     box-shadow: 0 0 .5rem var(--var-bg-primary);
+    transition: 200ms ease-in-out;
 }
 
 figcaption{
+    width: 100%;
     background-color: var(--var-bg-primary);
     opacity: 0.90;
     padding: .5rem;
-    margin-top: .25rem ;
+    margin-top: .7rem ;
     border-radius: 0 1rem ;
     border: .125rem solid var(--var-color-primary);
     box-shadow: 0 0 .5rem var(--var-bg-primary);
 }
 
-figcaption li{
-    font-size: 1.2rem;
+figcaption :is(li, a){
+    font-size: 1.1rem;
     font-family: var(--var-thin-font);
+}
+
+figcaption a{
+    display: block;
+    color: var(--var-color-secodary);
+    text-align: right;
+    text-decoration: underline;
+}
+
+figcaption a:hover{
+    color: var(--var-color-primary);
 }
 
 /* main container properties */
@@ -121,7 +147,7 @@ figcaption li{
         "section3"
         "footer";
     grid-template-columns: 100%;
-    grid-template-rows: min(100vh,41rem) auto auto 3.5rem;
+    grid-template-rows: min(100vh,41rem) auto auto 3rem;
 }
 
 /* navbar styles */
@@ -192,7 +218,7 @@ figcaption li{
 }
 
 #open{
-    margin: auto auto auto 1.5rem;
+    margin: auto auto auto .5rem;
 }
 
 /* aside style */ 
@@ -231,6 +257,7 @@ aside{
 #aside-nav-list > .nav-item + .nav-item {
     border-top: 1px solid var(--var-color-secodary);
 }
+
 /* about-me section's styles */ 
 #about{
     grid-area: section1;
@@ -254,6 +281,7 @@ aside{
 
 #about-header{
     max-width: 20rem;
+    text-shadow: 0 .25rem 0 var(--var-color-secodary);
 }
 
 #about-header > :is(h1, h4, p) {
@@ -262,9 +290,12 @@ aside{
 
 #about-details{
     margin: 1rem 0;
-    max-width: 25rem;
+    max-width: 22rem;
 }
 
+#about-details > img{
+    padding: .5rem;
+}
 
 /* mywork section's styles */ 
 #my-work{
@@ -288,13 +319,6 @@ aside{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     grid-gap: 1rem ;
-    justify-items: center;
-}
-
-#mywork-header{
-    align-self: center;
-    border-bottom: .125rem solid var(--var-color-secodary);
-    margin-bottom: 2rem;
 }
 
 #mywork-header h4{
@@ -305,20 +329,92 @@ aside{
     margin: 0;
 }
 
+.mywork-item p{
+    margin-top: 0;
+    margin-bottom: .25rem;
+    text-decoration: underline;
+}
+
+.mywork-figure{
+    max-width: 100%;
+}
+
+.mywork-img{
+    max-height: 20rem;
+    width: 100%;
+}
+
+.mywork-figure:hover > .mywork-img{
+    transform: scale(1.03);
+    border: .125rem solid var(--var-bg-secodary);
+}
+
+.fa-external-link-square-alt{
+    margin-left:.25rem;
+}
+
 /* contact me section's styles */
 #contact{
     grid-area: section3;
+    display: flex;
+    justify-content: center;
     background-color: var(--var-bg-primary);
     color: var(--var-color-primary);
 }
 
+#contact-container{
+    flex-direction: column;
+    padding: 2rem 1rem;
+    max-width: 75rem;
+}
+
+.contact-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-item{
+    margin: 0 1rem;
+}
+
+.contact-item:hover{
+    transform: scale(1.1);
+}
+
+.contact-link{
+    font-size: 3rem;
+    color: var(--var-color-primary);
+}
+
+
+
 /* footer styles */ 
 footer{
     grid-area: footer;
+    display: flex;
+    justify-content: center;
     background-color: var(--var-bg-secodary);
-    color: var(--var-color-sec--var-bg-secodary);
+    color: var(--var-color-primary);
 }
 
+#footer-container{
+    align-content:center ;
+    max-width: 75rem;
+    height: 100%;
+    text-align: center;
+}
+
+#footer-container :is(p,span){
+    margin: 0;
+    font-family: var(--var-thin-font);
+}
+
+#footer-container span{
+    color: var(--var-color-secodary);
+    text-decoration: underline;
+}
 
 /* media queries */ 
 
@@ -331,6 +427,7 @@ footer{
     /* navbar and aside */ 
     #navbar{
         background-color: var(--var-bg-primary);
+        border-bottom: .125rem solid var(--var-color-primary);
         box-shadow: 0 0 .5rem #000;
     }
 
