@@ -1,6 +1,6 @@
 /* main theme variables */
 :root{
-    --var-bg-primary: hsl(216, 18%, 16%);
+    --var-bg-primary: hsl(216, 19%, 16%);
     --var-bg-secodary:  hsl(217, 10%, 25%);
     --var-color-primary: hsl(0, 0%, 93%);
     --var-color-secodary: hsl(183, 100%, 35%);
@@ -75,9 +75,6 @@ img{
     align-items: center;
 }
 
-section{
-    border-bottom: .125rem solid var(--var-color-primary);
-}
 
 .section-header{
     align-self: center;
@@ -154,7 +151,7 @@ figcaption a:hover{
 #navbar{
     position: fixed;
     top: 0;
-    z-index: 1;
+    z-index: 3;
     min-height: 4rem;
     color: var(--var-color-primary);
     align-items: initial;
@@ -219,6 +216,7 @@ figcaption a:hover{
 
 #open{
     margin: auto auto auto .5rem;
+    z-index: 3;
 }
 
 /* aside style */ 
@@ -226,7 +224,7 @@ aside{
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 3;
     display: flex;
     flex-direction: column;
     padding: 1rem;
@@ -261,10 +259,14 @@ aside{
 /* about-me section's styles */ 
 #about{
     grid-area: section1;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: var(--var-bg-primary);
+    background-image: url('/img/symbol-scatter.svg');
+    background-position: center;
+    background-blend-mode: difference;
     color: var(--var-color-primary);
 }
 
@@ -273,6 +275,7 @@ aside{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    z-index: 2;
     padding: 1rem;
     width: 100%;
     max-width: 75rem;
@@ -297,11 +300,46 @@ aside{
     padding: .5rem;
 }
 
+.curve {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.curve svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 121px;
+}
+
+.curve .shape-fill {
+    fill: #393E46;
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+    .curve svg {
+        width: calc(100% + 1.3px);
+        height: 38px;
+    }
+}
+
+
+
 /* mywork section's styles */ 
 #my-work{
     grid-area: section2;
     display: flex;
     justify-content: center;
+    background-image: url('/img/stacked-steps.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     background-color: var(--var-bg-secodary);
     color: var(--var-color-primary)
 }
@@ -358,6 +396,10 @@ aside{
     grid-area: section3;
     display: flex;
     justify-content: center;
+    background-image: url('/img/blob.svg');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
     background-color: var(--var-bg-primary);
     color: var(--var-color-primary);
 }
@@ -385,6 +427,7 @@ aside{
 
 .contact-link{
     font-size: 3rem;
+    text-shadow: 0 0 .5rem var(--var-bg-primary);
     color: var(--var-color-primary);
 }
 
