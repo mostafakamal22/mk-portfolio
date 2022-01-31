@@ -1,9 +1,9 @@
 /* main theme variables */
 :root{
-    --var-bg-primary: hsl(216, 19%, 16%);
-    --var-bg-secodary:  hsl(217, 10%, 25%);
-    --var-color-primary: hsl(0, 0%, 93%);
-    --var-color-secodary: hsl(183, 100%, 35%);
+    --var-bg-primary:#4FBDBA;
+    --var-bg-secodary:  #072227;
+    --var-color-primary:  #072227;
+    --var-color-secodary: #AEFEFF;
     --var-selection-color: hsl(2, 76%, 35%);
     --var-brand-font: 'Dancing Script', cursive;
     --var-main-font: 'Mochiy Pop P One', sans-serif;
@@ -49,11 +49,25 @@ img{
 }
 
 /* re-usable styles*/
+.bg-primary{
+    background-color: var(--var-bg-primary);
+}
+
+.bg-secondary{
+    background-color: var(--var-bg-secodary);
+}
 
 .bg-primary-transparent{
-    background-color: rgba(0, 0, 0, .5);
     padding: .5rem;
     border-radius: 0.5rem 0;
+}
+
+.text-primary{
+    color: var(--var-color-primary);
+}
+
+.text-secondary{
+    color: var(--var-color-secodary);
 }
 
 .brand-font{
@@ -61,11 +75,10 @@ img{
 }
 
 .thin-font{
+    background-color: rgba(7,34,39,0.5);
     font-family: var(--var-thin-font);
-    font-weight: 100;
     font-size: 1.1rem;
-    box-shadow: 0 0 .25rem var(--var-bg-primary);
-    margin: 1.5rem 0 0;
+    box-shadow: 0 0 .25rem var(--var-color-primary);
 }
 
 .content-container{
@@ -79,10 +92,10 @@ img{
 .section-header{
     align-self: center;
     font-size: 1.2rem;
-    border-bottom: .125rem solid var(--var-color-secodary);
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
     line-height: .3;
-    text-shadow: 0 .25rem 0 var(--var-color-secodary);
+    color: var(--var-color-secodary);
+    text-shadow: 0 0 .25rem var(--var-color-primary);
 }    
 
 figure{
@@ -91,8 +104,7 @@ figure{
     justify-content: center;
     flex-direction: column;
     max-width: 15rem;
-    padding: 1rem; 
-    background-color: var(--var-color-secodary);
+    padding: 1rem;
     border-radius: .5rem 0;
 }
 
@@ -111,6 +123,7 @@ figure{
 figcaption{
     width: 100%;
     background-color: var(--var-bg-primary);
+    color: var(--var-color-primary);
     opacity: 0.90;
     padding: .5rem;
     margin-top: .7rem ;
@@ -126,13 +139,13 @@ figcaption :is(li, a){
 
 figcaption a{
     display: block;
-    color: var(--var-color-secodary);
+    color: var(--var-color-primary);
     text-align: right;
     text-decoration: underline;
 }
 
 figcaption a:hover{
-    color: var(--var-color-primary);
+    color: var(--var-color-secodary);
 }
 
 /* main container properties */
@@ -153,7 +166,6 @@ figcaption a:hover{
     top: 0;
     z-index: 3;
     min-height: 4rem;
-    color: var(--var-color-primary);
     align-items: initial;
 }
 
@@ -169,7 +181,6 @@ figcaption a:hover{
 #brand{
     flex-basis: 33.3%;   
     font-size: 2rem;
-    color: var(--var-color-primary);
 }
 
 #nav-container{
@@ -189,21 +200,18 @@ figcaption a:hover{
     padding: .5rem .5rem;
 }
 
-.nav-item:hover{
-    background-color: #000;
+.nav-item:hover .nav-link{
+    color: var(--var-color-secodary);
 }
 
 
 .nav-link{
     font-size: 0.9rem;
-    color: var(--var-color-primary);
 }
 
 .toggle-btn {
     padding: .05rem  .4rem;
     font-size: 1rem;
-    background-color: var(--var-bg-primary);
-    color: var(--var-color-primary);
     border: .125rem solid var(--var-color-primary);
     border-radius: 20%;
     margin-left: 1rem;
@@ -230,7 +238,6 @@ aside{
     padding: 1rem;
     height: 75vh;
     width: 75vw;
-    background-color: var(--var-bg-primary);
     border-right: .125rem solid var(--var-color-secodary);
     border-bottom: .125rem solid var(--var-color-secodary);
     border-bottom-right-radius: .25rem;
@@ -263,11 +270,8 @@ aside{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--var-bg-primary);
-    background-image: url('/img/symbol-scatter.svg');
+    background-image: url('/img/backgrounds/symbol-scatter-haikei.svg');
     background-position: center;
-    background-blend-mode: difference;
-    color: var(--var-color-primary);
 }
 
 #about-wrapper{
@@ -292,12 +296,18 @@ aside{
 }
 
 #about-details{
+    background-color: transparent;
     margin: 1rem 0;
     max-width: 22rem;
 }
 
-#about-details > img{
-    padding: .5rem;
+#about-details> img{
+    border: none;
+    box-shadow: none;
+}
+
+#about-details> p{
+    margin-top: .5rem;
 }
 
 .curve {
@@ -318,7 +328,7 @@ aside{
 }
 
 .curve .shape-fill {
-    fill: #393E46;
+    fill: #35858B;
 }
 
 /** For mobile devices **/
@@ -336,12 +346,10 @@ aside{
     grid-area: section2;
     display: flex;
     justify-content: center;
-    background-image: url('/img/stacked-steps.svg');
+    background-image: url('/img/backgrounds/layered-peak.svg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-color: var(--var-bg-secodary);
-    color: var(--var-color-primary)
 }
 
 #mywork-container{
@@ -374,6 +382,8 @@ aside{
 }
 
 .mywork-figure{
+    background-color: var(--var-color-secodary);
+    box-shadow: 0 0 .25rem var(--var-color-primary);
     max-width: 100%;
 }
 
@@ -384,7 +394,7 @@ aside{
 
 .mywork-figure:hover > .mywork-img{
     transform: scale(1.03);
-    border: .125rem solid var(--var-bg-secodary);
+    border: .125rem solid var(--var-bg-primary);
 }
 
 .fa-external-link-square-alt{
@@ -396,12 +406,6 @@ aside{
     grid-area: section3;
     display: flex;
     justify-content: center;
-    background-image: url('/img/blob.svg');
-    background-size: cover;
-    background-position: top;
-    background-repeat: no-repeat;
-    background-color: var(--var-bg-primary);
-    color: var(--var-color-primary);
 }
 
 #contact-container{
@@ -428,7 +432,6 @@ aside{
 .contact-link{
     font-size: 3rem;
     text-shadow: 0 0 .5rem var(--var-bg-primary);
-    color: var(--var-color-primary);
 }
 
 
@@ -438,8 +441,6 @@ footer{
     grid-area: footer;
     display: flex;
     justify-content: center;
-    background-color: var(--var-bg-secodary);
-    color: var(--var-color-primary);
 }
 
 #footer-container{
@@ -455,7 +456,6 @@ footer{
 }
 
 #footer-container span{
-    color: var(--var-color-secodary);
     text-decoration: underline;
 }
 
@@ -470,8 +470,7 @@ footer{
     /* navbar and aside */ 
     #navbar{
         background-color: var(--var-bg-primary);
-        border-bottom: .125rem solid var(--var-color-primary);
-        box-shadow: 0 0 .5rem #000;
+        box-shadow: 0 0 .25rem var(--var-bg-secodary);
     }
 
     #open{

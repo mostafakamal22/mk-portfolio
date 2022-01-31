@@ -10,29 +10,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400&display=swap" rel="stylesheet"> 
     <script src="https://kit.fontawesome.com/850d93f4db.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" href="/img/tab-icon.png">
     <title>MK WebDev</title>
 </head>
 <body>
     <div class="container-full">
         <div class="content-container" id="navbar">
             <header id="navbar-header">   
-                <a href="#" title="Home" class="brand-font" id="brand">MK WebDev</a>
+                <a href="#" title="Home" class="brand-font text-primary" id="brand">MK WebDev</a>
                 <nav id="nav-container">
                     <ul id="nav-list">
-                        <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-                        <li class="nav-item"><a href="#my-work" class="nav-link">MyWork</a></li>  
-                        <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>      
+                        <li class="nav-item"><a href="#about" class="nav-link text-primary">About</a></li>
+                        <li class="nav-item"><a href="#my-work" class="nav-link text-primary">MyWork</a></li>  
+                        <li class="nav-item"><a href="#contact" class="nav-link text-primary">Contact</a></li>      
                     </ul>
                 </nav>
             </header>
 
-            <button class="toggle-btn" id="open">
+            <button class="toggle-btn bg-secondary text-secondary" id="open">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
 
-        <aside>
-            <button class="toggle-btn" id="close" style="float: right;">
+        <aside class="bg-secondary">
+            <button class="toggle-btn bg-secondary text-secondary" id="close" style="float: right;">
                 <i class="fas fa-times"></i>
             </button>
             <figure id="my-pic-wrapper">
@@ -40,16 +41,16 @@
             </figure>
             <nav id="aside-nav">
                 <ul id="aside-nav-list">
-                    <li class="nav-item" title="home"><a href="#" style="font-size: 1.2rem;" class="brand-font nav-link">MK WebDev</a></li>
-                    <li class="nav-item" title="about me"><a href="#about" class="nav-link">About</a></li>
-                    <li class="nav-item" title="my work"><a href="#my-work" class="nav-link">MyWork</a></li>  
-                    <li class="nav-item" title="contact me"><a href="#contact" class="nav-link">Contact</a></li>      
+                    <li class="nav-item" title="home"><a href="#" style="font-size: 1.2rem;" class="brand-font nav-link text-secondary">MK WebDev</a></li>
+                    <li class="nav-item" title="about me"><a href="#about" class="nav-link text-secondary">About</a></li>
+                    <li class="nav-item" title="my work"><a href="#my-work" class="nav-link text-secondary">MyWork</a></li>  
+                    <li class="nav-item" title="contact me"><a href="#contact" class="nav-link text-secondary">Contact</a></li>      
                 </ul>
             </nav>
         </aside>
 
 
-        <section id="about">
+        <section id="about" class="bg-primary">
             <div class="content-container">
                 <div id="about-wrapper">
                     <header id="about-header">
@@ -57,9 +58,9 @@
                         <h1>I am a Junior Front End Web  Developer</h1>
                     </header>
                     <figure id="about-details">
-                        <img class="my-images" src="img/programming.svg" alt="my personal picture">
-                        <p class="thin-font bg-primary-transparent">I use different technologies like (Html5, css3, Javascript, React.js, Node.js, etc..)
-                            to make Modern and Fast Single Page Applications (SPA's).</p>
+                        <img class="my-images" src="img/backgrounds/programming.svg" alt="Web programming">
+                        <p class="thin-font bg-primary-transparent text-secondary">I use different technologies like (Html5, css3, Javascript, React.js, Node.js, etc..)
+                            to make Modern and Fast webPages.</p>
                     </figure>
                 </div>
             </div>
@@ -73,7 +74,7 @@
             </div>
         </section>
 
-        <section id="my-work">
+        <section id="my-work" class="bg-primary">
             <div class="content-container" id="mywork-container">
                 <header class="section-header">
                     <h4>This is My Stuff...</h4>
@@ -81,7 +82,7 @@
                 <ul id="mywork-wrapper">
                     <li class="mywork-item">
                         <figure class="mywork-figure">
-                            <img class="my-images mywork-img" src="img/coming-soon-shop.png" alt="example of my work ">
+                            <img class="my-images mywork-img" src="img/projects/coming-soon-shop.png" alt="example of my work ">
                             <figcaption>
                                 <p>Coming Soon Shop</p>
                                 <ul>
@@ -97,7 +98,7 @@
 
                     <li class="mywork-item">
                         <figure class="mywork-figure">
-                            <img class="my-images  mywork-img" src="img/25-5-clock.png" alt="example of my work">
+                            <img class="my-images  mywork-img" src="img/projects/25-5-clock.png" alt="example of my work">
                             <figcaption>
                                 <p>25-5 Break Clock</p>
                                 <li>Used technologies & tools:-</li>
@@ -111,7 +112,7 @@
 
                     <li class="mywork-item">
                         <figure class="mywork-figure">
-                            <img class="my-images  mywork-img" src="img/landing-page.png" alt="example of my work">
+                            <img class="my-images  mywork-img" src="img/projects/landing-page.png" alt="example of my work">
                             <figcaption>
                                 <p>Landing Page</p>
                                 <li>Used technologies & tools:-</li>
@@ -125,7 +126,7 @@
 
                     <li class="mywork-item">
                         <figure class="mywork-figure">
-                            <img class="my-images  mywork-img" src="img/25-5-clock.png" alt="example of my work">
+                            <img class="my-images  mywork-img" src="img/projects/25-5-clock.png" alt="example of my work">
                             <figcaption>
                                 <p>25-5 Break Clock</p>
                                 <li>Used technologies & tools:-</li>
@@ -139,7 +140,7 @@
 
                     <li class="mywork-item">
                         <figure class="mywork-figure">
-                            <img class="my-images  mywork-img" src="img/25-5-clock.png" alt="example of my work">
+                            <img class="my-images  mywork-img" src="img/projects/25-5-clock.png" alt="example of my work">
                             <figcaption>
                                 <p>25-5 Break Clock</p>
                                 <li>Used technologies & tools:-</li>
@@ -154,7 +155,7 @@
             </div>
         </section>
 
-        <section id="contact">
+        <section id="contact" class="bg-secondary">
             <div class="content-container" id="contact-container">
                 <header class="section-header">
                     <h4>Let's Work Together</h4>
@@ -162,22 +163,22 @@
 
                 <ul class="contact-list">
                     <li class="contact-item" title="Github">
-                        <a href="https://github.com/mostafakamal22" class="contact-link" target="_blank">
+                        <a href="https://github.com/mostafakamal22" class="contact-link text-secondary" target="_blank">
                             <i class="fab fa-github-square"></i>
                         </a>
                     </li>
                     <li class="contact-item" title="Linkedin">
-                        <a href="https://www.linkedin.com/in/mostafakamal22/" class="contact-link" target="_blank">
+                        <a href="https://www.linkedin.com/in/mostafakamal22/" class="contact-link text-secondary" target="_blank">
                             <i class="fab fa-linkedin"></i>
                         </a>
                     </li>
                     <li class="contact-item" title="Send Email">
-                        <a href="mailto: mk1319@fayoum.edu.eg" class="contact-link" target="_blank">
+                        <a href="mailto: mk1319@fayoum.edu.eg" class="contact-link text-secondary" target="_blank">
                             <i class="fas fa-envelope"></i>
                         </a>
                     </li>
                     <li class="contact-item" title="Whatsapp">
-                        <a href="https://wa.me/201008871950" class="contact-link" target="_blank">
+                        <a href="https://wa.me/201008871950" class="contact-link text-secondary" target="_blank">
                             <i class="fab fa-whatsapp-square"></i>
                         </a>
                     </li>
@@ -185,9 +186,9 @@
             </div>
         </section>
 
-        <footer>
+        <footer class="bg-secondary text-secondary">
             <div class="content-container" id="footer-container">
-               <p>Designed and Developed By <span>Mostafa Kamal</span>@2022.</p> 
+               <p>Designed and Developed By <span>Mostafa Kamal</span> @2022.</p> 
             </div>
         </footer>
     </div>
